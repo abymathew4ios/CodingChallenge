@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
         setupBindings()
     }
     
+    //MARK: Bar Button setup
     private func setupNavigationBar(){
         
         // menu button
@@ -55,6 +56,9 @@ class HomeViewController: UIViewController {
         navigationItem.leftBarButtonItem = menuBarButton
         
     }
+    
+    
+    //MARK: Bar Button Actions
     @objc func menuTapped(sender : UIButton){
         print("menu button tapped")
     }
@@ -67,6 +71,7 @@ class HomeViewController: UIViewController {
         print("more button tapped")
     }
     
+    //MARK: Binding Setup
     private func setupBindings() {
         homeVM.messageText = {[weak self] messageValue in
             DispatchQueue.main.async {
@@ -109,7 +114,7 @@ extension HomeViewController : UITableViewDataSource , UITableViewDelegate {
         let detailVM = DetailViewModel(result: article)
         
         guard let vc = storyboard?.instantiateViewController(identifier: "DetailPageViewController", creator: { coder in
-            return DetailPageViewController(coder: coder, detailVM: detailVM)
+            return DetailPageViewController(coder: coder, detailVM: detailVM) // detailVM passing as a dependency object.
         }) else {
             fatalError("Failed to load EditUserViewController from storyboard.")
         }
