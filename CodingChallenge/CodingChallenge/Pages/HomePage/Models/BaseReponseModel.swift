@@ -15,12 +15,12 @@ struct BaseReponseModel : Codable {
 		case results = "results"
 	}
 
-//	init(from decoder: Decoder) throws {
-//		let values = try decoder.container(keyedBy: CodingKeys.self)
-//		status = try values.decodeIfPresent(String.self, forKey: .status)
-//		copyright = try values.decodeIfPresent(String.self, forKey: .copyright)
-//		num_results = try values.decodeIfPresent(Int.self, forKey: .num_results)
-//		results = try values.decodeIfPresent([Results].self, forKey: .results)
-//	}
+	init(from decoder: Decoder) throws {
+		let values = try decoder.container(keyedBy: CodingKeys.self)
+		status = try values.decodeIfPresent(String.self, forKey: .status)
+		copyright = try values.decodeIfPresent(String.self, forKey: .copyright)
+		num_results = try values.decodeIfPresent(Int.self, forKey: .num_results)
+		results = try values.decodeIfPresent([Results].self, forKey: .results)
+	}
 
 }
