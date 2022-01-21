@@ -13,6 +13,8 @@ class DetailPageViewController: UIViewController {
     @IBOutlet weak var byLineLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     var detailVM: DetailViewModel
     
     init?(coder: NSCoder, detailVM: DetailViewModel) {
@@ -30,7 +32,10 @@ class DetailPageViewController: UIViewController {
         titleLabel.text = detailVM.result.title ?? ""
         byLineLabel.text = detailVM.result.byline ?? ""
         dateLabel.text = detailVM.result.published_date ?? ""
-        // Do any additional setup after loading the view.
+        
+        if let imageURL = URL(string:detailVM.result.media?.first?.mediaMetadata?[1].url ?? "") {
+            imageView.loadImageFrom(imageURL)
+        }
     }
     
 

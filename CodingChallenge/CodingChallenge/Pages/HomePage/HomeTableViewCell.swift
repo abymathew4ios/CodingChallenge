@@ -14,6 +14,8 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel2: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var thumnailImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,6 +31,10 @@ class HomeTableViewCell: UITableViewCell {
         titleLabel.text = data.title ?? "No title"
         nameLabel1.text = data.byline ?? ""
         dateLabel.text = data.published_date ?? "0000-00-00"
+        
+        if let imageURL = URL(string:data.media?.first?.mediaMetadata?.first?.url ?? "") {
+            thumnailImage.loadImageFrom(imageURL)
+        }
     }
     
 }
