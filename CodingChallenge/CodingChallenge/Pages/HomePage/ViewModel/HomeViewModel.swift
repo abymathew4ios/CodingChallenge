@@ -16,8 +16,7 @@ class HomeViewModel {
             messageText?("update UI")
         }
     }
-    var messageText: ((String?) -> Void)?
-    
+    var messageText: ((String?) -> Void)? // closure for UI updating purpose (acting as a bind)
     
     
     init(repository: HomeRepository = HomeRepository()) {

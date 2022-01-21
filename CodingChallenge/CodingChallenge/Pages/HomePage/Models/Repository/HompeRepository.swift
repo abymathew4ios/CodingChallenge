@@ -14,7 +14,7 @@ class HomeRepository {
     
     private var networkManager: NetworkService
     
-    init(networkManager: NetworkService = NetworkManager()) {
+    init(networkManager: NetworkService = NetworkManager()) { // dependency injecion via construction will make more testability of HomeRpository
         self.networkManager = networkManager
     }
     
