@@ -7,16 +7,26 @@
 
 import Foundation
 
-// Abstract layer for Network
+//--------------------------- Abstract layer for Network ---------------------------
 protocol NetworkService {
     func fetch<T: Codable>(request: URLRequest, completion: @escaping (Result<T, Error>) -> Void)
 }
+
+//---------------------------
+
+
+
+
+// Network Error
 enum NetworkError: Error {
     case invalidUrl
     case invalidData
 }
-class NetworkManager: NetworkService {
+
+// NetworkManager
+class NetworkManager: NetworkService { // NetworkManager confirming NetworkService interface (this way we achieved Dependency Inversion)
     
+    // fetch method with effective use of GENERICS and RESULT type.
     func fetch<T: Codable>(request: URLRequest, completion: @escaping (Result<T, Error>) -> Void) {
         
         // url session call API
