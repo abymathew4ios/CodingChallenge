@@ -219,10 +219,9 @@
 		9B7EA7262799C43C006B04EA /* Detail Page */ = {
 			isa = PBXGroup;
 			children = (
+				9BC96E84279A6FD00065D165 /* DetailPageViewController.swift */,
 				9B7EA7272799C457006B04EA /* ViewModel */,
 				9B7EA7282799C460006B04EA /* Model */,
-				9BC96E84279A6FD00065D165 /* DetailPageViewController.swift */,
-				9BC96E86279A70620065D165 /* DetailViewModel.swift */,
 			);
 			path = "Detail Page";
 			sourceTree = "<group>";
@@ -230,6 +229,7 @@
 		9B7EA7272799C457006B04EA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9BC96E86279A70620065D165 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
