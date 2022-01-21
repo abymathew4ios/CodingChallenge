@@ -24,6 +24,7 @@
 		9B0B684A2799FC4F00C421AF /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B68432799FC4F00C421AF /* Results.swift */; };
 		9B0B684B2799FC4F00C421AF /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B68442799FC4F00C421AF /* Media.swift */; };
 		9B0B684C2799FC4F00C421AF /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B68442799FC4F00C421AF /* Media.swift */; };
+		9B59B0BF279A9AB4004A6162 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59B0BE279A9AB4004A6162 /* Extensions.swift */; };
 		9B7EA6F12799C21B006B04EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7EA6F02799C21B006B04EA /* AppDelegate.swift */; };
 		9B7EA6F32799C21B006B04EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7EA6F22799C21B006B04EA /* SceneDelegate.swift */; };
 		9B7EA6F52799C21B006B04EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7EA6F42799C21B006B04EA /* HomeViewController.swift */; };
@@ -65,6 +66,7 @@
 		9B0B68422799FC4E00C421AF /* BaseReponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseReponseModel.swift; sourceTree = "<group>"; };
 		9B0B68432799FC4F00C421AF /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		9B0B68442799FC4F00C421AF /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		9B59B0BE279A9AB4004A6162 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9B7EA6ED2799C21B006B04EA /* CodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7EA6F02799C21B006B04EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B7EA6F22799C21B006B04EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B59B0BD279A9A9E004A6162 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B59B0BE279A9AB4004A6162 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9B7EA6E42799C21B006B04EA = {
 			isa = PBXGroup;
 			children = (
@@ -209,10 +219,9 @@
 		9B7EA7262799C43C006B04EA /* Detail Page */ = {
 			isa = PBXGroup;
 			children = (
+				9BC96E84279A6FD00065D165 /* DetailPageViewController.swift */,
 				9B7EA7272799C457006B04EA /* ViewModel */,
 				9B7EA7282799C460006B04EA /* Model */,
-				9BC96E84279A6FD00065D165 /* DetailPageViewController.swift */,
-				9BC96E86279A70620065D165 /* DetailViewModel.swift */,
 			);
 			path = "Detail Page";
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 		9B7EA7272799C457006B04EA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9BC96E86279A70620065D165 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +244,7 @@
 		9B7EA7292799C54E006B04EA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9B59B0BD279A9A9E004A6162 /* Extensions */,
 				9B7EA72B2799C58A006B04EA /* Constants */,
 				9B7EA72A2799C564006B04EA /* Networking */,
 				9B7EA6F92799C21D006B04EA /* Assets.xcassets */,
@@ -408,6 +419,7 @@
 				9B0B68392799ED0500C421AF /* HompeRepository.swift in Sources */,
 				9B7EA6F12799C21B006B04EA /* AppDelegate.swift in Sources */,
 				9B0B68452799FC4F00C421AF /* MediaMetadata.swift in Sources */,
+				9B59B0BF279A9AB4004A6162 /* Extensions.swift in Sources */,
 				9B0B684B2799FC4F00C421AF /* Media.swift in Sources */,
 				9B7EA6F32799C21B006B04EA /* SceneDelegate.swift in Sources */,
 				9BC96E87279A70620065D165 /* DetailViewModel.swift in Sources */,

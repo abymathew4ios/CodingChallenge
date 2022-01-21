@@ -70,7 +70,7 @@ class HomeViewController: UIViewController {
     private func setupBindings() {
         homeVM.messageText = {[weak self] messageValue in
             DispatchQueue.main.async {
-                print(messageValue)
+                print(messageValue ?? "")
                 self?.tableView.reloadData()
             }
         }
